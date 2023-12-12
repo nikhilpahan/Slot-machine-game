@@ -97,10 +97,26 @@ const spin = () => {
 };
 
 
+// 5. check if the user won
+
+const transpose = (reels) => {
+  const rows = [];
+
+  for (let i = 0; i < ROWS; i++) {
+    rows.push([]);
+    for (let j = 0; j < COLS; j++) {
+      rows[i].push(reels[j][i])
+    }
+  }
+
+  return rows;
+}
+
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
 const reels = spin();
 
 
-// 5. check if the user won
+
+
